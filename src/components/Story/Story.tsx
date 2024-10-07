@@ -2,7 +2,7 @@
 // import StoryCard from "./StoryCard";
 // import { motion } from "framer-motion";
 import deborah from "../../assets/images/deborah.png"
-import icon2 from "../../assets/th.png"
+// import icon2 from "../../assets/th.png"
 import { Award, Trophy } from "lucide-react";
 
 function Story() {
