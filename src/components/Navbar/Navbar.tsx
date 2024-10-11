@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import logo from "../../assets/images/logo.png";
+// import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Horizontal - Logo.png"
 import { navbarData } from "../../data/data";
 import NavLinkTo from "../Button/NavLinkTo";
 import { Button, Link } from "react-scroll";
@@ -40,7 +41,7 @@ function Navbar() {
             <img
               src={logo}
               alt="logo"
-              className="h-[55px] md:h-[68px] w-[46px] md:w-[57px]"
+              className="h-[67px] md:h-[68px] w-[150px] md:w-[150px]"
             />
           </Link>
           <div className="hidden lg:flex items-center gap-10">

@@ -10,7 +10,7 @@ import Price from "./components/Price/Price";
 import Skill from "./components/Skill/Skill";
 import Story from "./components/Story/Story";
 import Webinar from "./components/Webinar/Webinar";
-// import Card from "./components/Cards/SkillCard";
+import Card from "./components/Skill/Skill"
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Story />
         <Skill />
         <Webinar />
-        {/* <Card /> */}
+        <Card />
         <Price />
         <Faq />
         <Join />

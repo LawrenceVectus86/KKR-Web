@@ -1,92 +1,101 @@
-// import React from 'react';
-import { motion } from "framer-motion";
-import SkillCard from "../Skill/SkillCard";
-import gambar from "../../assets/card/Card - Hardskill.png";
-import gambar1 from "../../assets/card/Graphic Design  - Image.png"
-import gambar2 from "../../assets/card/Social Media Specialist - Image.png"
-import gambar3 from "../../assets/card/Web CMS - Image.png"
-import gambar4 from "../../assets/card/E-Commerce - Image.png"
-import gambar5 from "../../assets/card/UX Research - Image.png"
+import React from 'react';
 
-// Assuming this is the structure of your data
-const hardSkills = [
+// Define type for each card
+type CardProps = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+};
+
+const cards: CardProps[] = [
   {
-    id: 1,
-    name: "Product Design",
-    description: "Fundamental UI Design, wireframing, prototyping hingga usability testing.",
-    image: gambar
+    icon: (
+      <div className="bg-blue-200 w-12 h-12 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 text-2xl">🔍</span>
+      </div>
+    ),
+    title: 'Strategi Kerja Remote',
+    description:
+      'Membantu kamu mencari, melamar, dan sukses dalam pekerjaan remote di berbagai platform.',
   },
   {
-    id: 2,
-    name: "Graphic Design",
-    description: "Dasar desain grafis dengan Adobe, tipografi, dan teknik visual kreatif.",
-    image: gambar1
+    icon: (
+      <div className="bg-blue-200 w-12 h-12 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 text-2xl">💼</span>
+      </div>
+    ),
+    title: 'Optimasi LinkedIn',
+    description:
+      'Membantu kamu mengelola LinkedIn agar lebih professional dan menarik perhatian recruiter.',
   },
   {
-    id: 3,
-    name: "Social Media Specialist",
-    description: "Kelola konten, interaksi user, dan analisis kinerja untuk tujuan bisnis.",
-    image: gambar2
+    icon: (
+      <div className="bg-blue-200 w-12 h-12 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 text-2xl">📄</span>
+      </div>
+    ),
+    title: 'Tips Membuat CV',
+    description:
+      'Rahasia membuat CV dan surat lamaran yang membuat kamu diterima kerja remote!',
   },
   {
-    id: 4,
-    name: "Web CMS",
-    description: "Buat website interaktif tanpa coding, menggunakan Web Builder.",
-    image: gambar3
+    icon: (
+      <div className="bg-blue-200 w-12 h-12 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 text-2xl">🔎</span>
+      </div>
+    ),
+    title: 'Analisis Diri',
+    description:
+      'Mengidentifikasi kekuatan dan kelemahan kamu, membantu fokus pada skill terbaik yang siap dijual.',
   },
   {
-    id: 5,
-    name: "E-Commerce",
-    description: "Kelola produk dan strategi marketing untuk tingkatkan penjualan.",
-    image: gambar4
+    icon: (
+      <div className="bg-blue-200 w-12 h-12 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 text-2xl">🛍️</span>
+      </div>
+    ),
+    title: 'Kelas Marketplace',
+    description:
+      'Membantu kamu untuk mengelola profil freelancer di platform yang tersedia, nasional maupun internasional.',
   },
   {
-    id: 6,
-    name: "UX Research",
-    description: "Metode riset pengguna, analisis data, dan pembuatan user persona.",
-    image: gambar5
-  }
+    icon: (
+      <div className="bg-blue-200 w-12 h-12 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 text-2xl">✉️</span>
+      </div>
+    ),
+    title: 'Melamar Pekerjaan Via Email',
+    description:
+      'Tips membuat lamaran kerja yang menarik perhatian dan dipanggil untuk wawancara.',
+  },
 ];
 
-function Skill() {
+const SoftSkillsProficiency: React.FC = () => {
   return (
-    <section id="skills" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6 pt-5">Hard Skills Proficiency</h2>
-        
-        <div className="text-center mb-10">
-          <h3 className="text-2xl font-bold mb-2">
-            Pilih Bidang yang Kamu Minati
-          </h3>
-          <p className="text-gray-600">
-            Jelajahi Dunia Teknologi: Peran, Skill, dan Peluang di Luar Pemrograman
-          </p>
-        </div>
+    <div className="bg-white py-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 className="text-4xl font-bold text-center text-gray-900 mb-4">
+          Softskill Proficiency
+        </h1>
+        <p className="text-xl text-center text-gray-600 mb-10">
+          Tingkatkan Kemampuan Interpersonal
+        </p>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, staggerChildren: 0.1 }}
-        >
-          {hardSkills.map((skill) => (
-            <motion.div
-              key={skill.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="bg-white border border-blue-300 shadow-md rounded-[24px] p-6 flex flex-col items-start transition-all hover:shadow-lg hover:-translate-y-1 duration-300"
             >
-              <SkillCard
-                name={skill.name}
-                description={skill.description}
-                image={skill.image}
-              />
-            </motion.div>
+              <div className="mb-4">{card.icon}</div>
+              <h2 className="text-lg font-bold mb-2 text-gray-900">{card.title}</h2>
+              <p className="text-gray-600 text-sm">{card.description}</p>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
-export default Skill;
+export default SoftSkillsProficiency;

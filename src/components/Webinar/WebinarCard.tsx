@@ -10,7 +10,7 @@ function WebinarCard({
   description: string;
 }) {
   return (
-    <div className="border-t border-l border-r border-b-[10px] border-black p-5 md:p-8 lg:p-10 rounded-[10px] flex flex-col justify-between items-end">
+    <div className="border-t border-l border-r border-b-[15px] border-black p-5 md:p-10 lg:p-15 rounded-[10px] flex flex-col justify-between items-end">
       <div className="flex flex-col">
         <h1 className="text-4xl md:text-6xl lg:text-[78px] font-semibold text-black text-right">
           {id}

@@ -1,5 +1,6 @@
 import { BsInstagram, BsLinkedin, BsTiktok, BsYoutube } from "react-icons/bs";
-import LogoMain from "../../assets/images/logo-main.png";
+// import LogoMain from "../../assets/images/logo-main.png";
+import LogoMain from "../../assets/images/Horizontal - Logo.png"
 
 function Footer() {
   return (
