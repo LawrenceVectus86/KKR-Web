@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variant";
-import PriceTile from "../Ui/PriceTile";
+// import PriceTile from "../Ui/PriceTile";
 
 function Price() {
   return (
