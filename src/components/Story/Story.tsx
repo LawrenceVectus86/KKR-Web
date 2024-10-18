@@ -1,7 +1,10 @@
 // import React from 'react';
 import deborah from '../../assets/images/deborah.png'
 import { Trophy, Award } from 'lucide-react';
-
+import kkr2 from '../../assets/kkr2.png';
+import dtech from '../../assets/dtech.png';
+import ddesign from '../../assets/ddesign.png'
+import hydro from '../../assets/hydro.png'
 const FounderProfile = () => {
   return (
     <div className="max-w-5xl mx-auto p-6 bg-white">
@@ -27,12 +30,12 @@ const FounderProfile = () => {
             Jika dia bisa, Kamu juga pasti bisa!
           </p>
           
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 text-xl  flex flex-wrap gap-2">
             {[
-              { name: 'CEO of KitaKerjaRemote', icon: '/api/placeholder/20/20' },
-              { name: 'CEO of Deborah Tech', icon: '/api/placeholder/20/20' },
-              { name: 'CEO of Deborah Design LTD', icon: '/api/placeholder/20/20' },
-              { name: 'Former CEO of PT Hydromarket Indonesia', icon: '/api/placeholder/20/20' }
+              { name: 'CEO of KitaKerjaRemote', icon: kkr2 },
+              { name: 'CEO of Deborah Tech', icon: dtech },
+              { name: 'CEO of Deborah Design LTD', icon: ddesign },
+              { name: 'Former CEO of PT Hydromarket Indonesia', icon: hydro }
             ].map((role, index) => (
               <span key={index} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center">
                 <img src={role.icon} alt="" className="w-4 h-4 mr-1 rounded-full" />

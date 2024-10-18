@@ -19,7 +19,7 @@ function Webinar() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [cards.length]);
@@ -29,24 +29,24 @@ function Webinar() {
       <div className="py-6 sm:py-10">
         <h1 className="text-2xl sm:text-3xl text-center font-bold text-blue-600">Live Webinar</h1>
         <p className="text-lg sm:text-xl text-center font-bold mt-2">Ikuti Webinar dengan Mentor Terbaik</p>
-        <div className="relative mt-6 sm:mt-10 h-80 sm:h-96 overflow-hidden">
+        <div className="relative mt-6 sm:mt-10 h-[309px] overflow-hidden">
           <div 
-            className="flex transition-transform duration-500 ease-in-out absolute left-0 right-0"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            className="flex transition-transform duration-10000 ease-linear"
+            style={{ transform: `translateX(-${activeIndex * (100 / cards.length)}%)` }}
           >
-            {[...cards, ...cards].map((card, index) => (
+            {cards.map((card, index) => (
               <div 
                 key={index} 
-                className={`w-full sm:w-1/4 flex-shrink-0 px-2 transition-all duration-500 ${
-                  index % cards.length === activeIndex ? 'scale-105 z-10' : 'scale-100 z-0'
+                className={`w-[360px] flex-shrink-0 px-5 transition-all duration-500 border-box ${
+                  index === activeIndex ? 'scale-102 z-10 border-blue-500' : 'scale-100 z-0'
                 }`}
               >
-                <div className="border border-blue-500 rounded-lg shadow-lg p-4 sm:p-6 h-full">
-                  <div className="flex items-start mb-3 sm:mb-4">
-                    <img src={card.icon} alt={`Icon representing ${card.title}`} className="w-12 h-12 sm:w-16 sm:h-16"/>
+                <div className="border border-blue-500 rounded-lg shadow-lg p-4 h-full bg-white">
+                  <div className="flex items-start mb-3">
+                    <img src={card.icon} alt={`Icon representing ${card.title}`} className="w-16 h-16"/>
                   </div>
-                  <h2 className="text-base sm:text-lg font-bold">{card.title}</h2>
-                  <p className="text-gray-600 mt-1 sm:mt-2 text-xs sm:text-sm">{card.description}</p>
+                  <h2 className="text-lg font-bold">{card.title}</h2>
+                  <p className="text-gray-600 mt-2 text-sm">{card.description}</p>
                 </div>
               </div>
             ))}
