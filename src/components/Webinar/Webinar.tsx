@@ -92,19 +92,20 @@ function Webinar() {
       <div className="sm:hidden flex justify-center space-x-4 mt-4">
         <button 
           onClick={handlePrev} 
-          className="bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600"
-          style={{ fontSize: '24px', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center' }}
+          className="bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600 flex justify-center items-center"
+          style={{ fontSize: '24px', width: '50px', height: '50px' }}  // Konsistensi lebar dan tinggi
         >
           {"<"}
         </button>
         <button 
           onClick={handleNext} 
-          className="bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600"
-          style={{ fontSize: '24px', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center' }}
+          className="bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600 flex justify-center items-center"
+          style={{ fontSize: '24px', width: '50px', height: '50px' }}  // Konsistensi lebar dan tinggi
         >
           {">"}
-        </button>
-      </div>
+      </button>
+    </div>
+
     </section>
   );
 }
