@@ -24,6 +24,7 @@ function Webinar() {
     
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+
   }, []);
 
   const handleNext = () => {
@@ -41,8 +42,8 @@ function Webinar() {
       {/* Tombol Panah Kiri */}
       <button 
         onClick={handlePrev} 
-        className="hidden sm:flex bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600 absolute top-1/2 transform -translate-y-1/2 left-[-0px] z-20"
-        style={{ fontSize: '24px', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center' }}
+        className="hidden sm:flex text-white p-3 rounded-full shadow hover:bg-blue-600 absolute top-1/2 transform -translate-y-1/2 left-[-0px] z-20"
+        style={{ fontSize: '24px', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center', backgroundColor: '#6494EB' }}
       >
         {"<"}
       </button>
@@ -82,8 +83,8 @@ function Webinar() {
       {/* Tombol Panah Kanan */}
       <button 
         onClick={handleNext} 
-        className="hidden sm:flex bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600 absolute top-1/2 transform -translate-y-1/2 right-[-0px] z-20"
-        style={{ fontSize: '24px', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center' }}
+        className="hidden sm:flex text-white p-3 rounded-full shadow hover:bg-blue-600 absolute top-1/2 transform -translate-y-1/2 right-[-0px] z-20"
+        style={{ fontSize: '24px', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center', backgroundColor: '#6494EB' }}
       >
         {">"}
       </button>
@@ -92,15 +93,15 @@ function Webinar() {
       <div className="sm:hidden flex justify-center space-x-4 mt-4">
         <button 
           onClick={handlePrev} 
-          className="bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600 flex justify-center items-center"
-          style={{ fontSize: '24px', width: '50px', height: '50px' }}  // Konsistensi lebar dan tinggi
+          className="text-white p-3 rounded-full shadow hover:bg-blue-600 flex justify-center items-center"
+          style={{ fontSize: '24px', width: '50px', height: '50px', backgroundColor: '#6494EB' }}  // Konsistensi lebar dan tinggi
         >
           {"<"}
         </button>
         <button 
           onClick={handleNext} 
           className="bg-blue-500 text-white p-3 rounded-full shadow hover:bg-blue-600 flex justify-center items-center"
-          style={{ fontSize: '24px', width: '50px', height: '50px' }}  // Konsistensi lebar dan tinggi
+          style={{ fontSize: '24px', width: '50px', height: '50px', backgroundColor: '#6494EB'}}  // Konsistensi lebar dan tinggi
         >
           {">"}
       </button>
