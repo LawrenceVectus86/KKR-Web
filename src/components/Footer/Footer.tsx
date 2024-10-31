@@ -14,13 +14,13 @@ function Footer() {
           </p>
           <div className="mt-6">
             <div className="flex flex-col">
-              <a
+              {/* <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScCLs-9OcrLTDAFZiogyIzRAOrB0wJ4KxiXHQ-E4DE4V-epdQ/viewform?usp=sf_link"
                 target="_blank"
                 className="border border-black  py-4 px-6 rounded text-sm md:text-base text-center"
               >
                 Saya Mau Info Terbaru Di Email Saya
-              </a>
+              </a> */}
               <p className="mt-4 text-xs">
                 By subscribing, you agree to our Privacy Policy and consent to
                 receive updates from our company.
@@ -53,7 +53,7 @@ function Footer() {
           <div className="flex flex-col mt-4">
             <h6 className="text-base font-bold">Email</h6>
             <p className="text-sm pt-1">
-              <a href="mailto:tatia@deborah-tech.com">tatia@deborah-tech.com</a>
+              <a href="mailto:tatia@deborah-tech.com">deborahhuda8@gmail.com</a>
             </p>
           </div>
           <div className="flex flex-col mt-4">

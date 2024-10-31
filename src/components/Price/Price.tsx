@@ -75,7 +75,7 @@ function Price() {
                 {/* Button */}
                 <div className="flex">
                   <a
-                    href="https://wa.me/6282144234649"
+                    href="https://pakasir.gx1.org/pay/kitakerjaremote/10000000"
                     target="_blank"
                     className="btn-primary mt-6 w-full text-center bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-all"
                   >
